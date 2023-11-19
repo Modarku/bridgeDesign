@@ -1,7 +1,5 @@
 package Example2.with_bridge;
 
-import Example2.without_bridge.Windows11Pro;
-
 import java.util.Objects;
 
 public class Windows11 extends MicrosoftWindows {
@@ -11,11 +9,11 @@ public class Windows11 extends MicrosoftWindows {
 
     @Override
     public MicrosoftWindows upgrade(MicrosoftWindows windows) {
-        if (!this.getState()) {
+        if (!state) {
             System.out.println("Failed to upgrade! " + this + " is currently not running!");
             return this;
         }
-        if (windows instanceof Windows11 && Objects.equals(windows.edition, this.edition)) {
+        if (windows instanceof Windows11 && Objects.equals(windows.edition.getEdition(), this.edition.getEdition())) {
             System.out.println("Failed to upgrade! Windows is already in " + windows);
             return this;
         }

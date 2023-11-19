@@ -11,10 +11,6 @@ public abstract class MicrosoftWindows {
         state = false;
     }
 
-    public boolean getState() {
-        return state;
-    }
-
     public void boot() {
         if (state) {
             System.out.println(this + " is already running!");

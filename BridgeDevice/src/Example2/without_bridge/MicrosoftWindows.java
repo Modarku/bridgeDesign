@@ -43,10 +43,6 @@ public abstract class MicrosoftWindows {
         }
     }
 
-    public boolean getState() {
-        return state;
-    }
-
     public abstract MicrosoftWindows upgrade(MicrosoftWindows windows);
 
     @Override

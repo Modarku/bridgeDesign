@@ -7,7 +7,7 @@ public class Windows11Pro extends MicrosoftWindows {
 
     @Override
     public MicrosoftWindows upgrade(MicrosoftWindows windows) {
-        if (!this.getState()) {
+        if (!state) {
             System.out.println("Failed to upgrade! " + this + " is currently not running!");
             return this;
         }
